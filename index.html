@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Digimate</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add responsive design */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color:  rgba(48,238,226,1);
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            max-height: 160px;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            max-height: 150px;
+            width: auto;
+        }
+
+        .quote-btn {
+            background-color: #06003b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 2.1em;
+            border-radius: 5px;
+        }
+
+        .menu {
+            font-size: 2.1em;
+            cursor: pointer;
+            color: #1c0056;
+            font-weight: bold;
+        }
+
+        .hero-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            
+            color: white;
+            padding: 50px 20px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+       
+
+        footer {
+            background-color: rgba(48,238,226,1);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            
+        }
+
+        @media (min-width: 768px) {
+            .hero-section {
+                flex-wrap: nowrap;
+                text-align: left;
+            }
+
+            .hero-content {
+                max-width: 50%;
+                text-align: left;
+            }
+
+            .hero-image {
+                max-width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo_trans.png" alt="Logo">
+            </div>
+            <a href="request_a_quote.html"> 
+            <button class="quote-btn">REQUEST A QUOTE</button>
+        </a>
+            <div class="menu">MENU
+              
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="#services">SERVICES</a>
+                    <a href="#">CASE STUDIES</a>
+                    <a href="#">WORK BY INDUSTRY</a>
+                    <a href="#">DIGITAL TRENDS</a>
+                    <a href="about.html">ABOUT</a>
+                    <a href="request_a_quote.html">CONTACT</a>
+                    
+                </div>
+            </div>
+       
+        </div>
+    </header>
+
+    <main>
+        <div class="marquee">
+            <span>Boost your brand | Generate leads | Optimize audiences | Drive sales | Innovate with The Digimate 🚀</span>
+        </div>
+        <section class="hero-section">
+            <div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+             </div>
+            <div class="hero-content">
+                <nav class="breadcrumb">
+                    <a href="#">Home</a> > <a href="#">The Digimate</a>
+                </nav>
+                <h1>The Digimate</h1>
+                <p>Partner with a leading digital marketing agency to increase brand awareness, reach your target audience & grow your business online.</p>
+                <ul class="features">
+                    <li>Optimize Targeted Audiences</li>
+                    <li>Generate Qualified Leads</li>
+                    <li>Boost Brand Authority</li>
+                </ul>
+                <a href="request_a_quote.html"> 
+                <button class="cta-btn">REQUEST A QUOTE</button></a>
+            </div>
+            
+          
+        <section class="services" id="services">
+            <h2>Our Services</h2>
+            <div class="services-container">
+                <a href="digital_marketing.html" class="service-card">
+                    <img src="digital_marketing.jpg" alt="Service 1">
+                    <h3>Digital Marketing</h3>
+                    <p>Improve your website's visibility on search engines.</p>
+                </a>
+                <a href="webdesign.html" class="service-card">
+                    <img src="webdev.jpg" alt="Service 2">
+                    <h3>Website Design and Development</h3>
+                    <p>Grow your audience on social media platforms.</p>
+                </a>
+                <a href="mobdev.html" class="service-card">
+                    <img src="mobdev.jpg" alt="Service 3">
+                    <h3>Mobile App Design and Development</h3>
+                    <p>Create and share valuable content to attract customers.</p>
+                </a>
+                <a href="graphic_design.html" class="service-card">
+                    <img src="graphic_design.jpg" alt="Service 4">
+                    <h3>Graphic Design</h3>
+                    <p>Build modern and responsive websites.</p>
+                </a>
+               
+            </div>
+            <div class="services-container2">
+                <a href="logo_design.html" class="service-card">
+                    <img src="logo_design.jpg" alt="Service 1">
+                    <h3>Logo Design</h3>
+                    <p>Improve your website's visibility on search engines.</p>
+                </a>
+                <a href="social_media.html" class="service-card">
+                    <img src="social_media.jpg" alt="Service 2">
+                    <h3>Social Media Marketing</h3>
+                    <p>Grow your audience on social media platforms.</p>
+                </a>
+                <a href="email_marketing.html" class="service-card">
+                    <img src="email_marketing.jpg" alt="Service 3">
+                    <h3>Email Marketing</h3>
+                    <p>Create and share valuable content to attract customers.</p>
+                </a>
+                <a href="whatsapp_marketing.html" class="service-card">
+                    <img src="whatsapp_marketing.jpg" alt="Service 4">
+                    <h3>Whatsapp Marketing</h3>
+                    <p>Build modern and responsive websites.</p>
+                </a>
+               
+            </div>
+            <div class="services-container3">
+                <a href="seo.html" class="service-card">
+                    <img src="seo.jpg" alt="Service 1">
+                    <h3>SEO Optimization</h3>
+                    <p>Improve your website's visibility on search engines.</p>
+                </a>
+                <a href="pay_per_click.html" class="service-card">
+                    <img src="pay_per.jpg" alt="Service 2">
+                    <h3>Pay Per Click</h3>
+                    <p>Grow your audience on social media platforms.</p>
+                </a>
+                <a href="affiliate_marketing.html" class="service-card">
+                    <img src="affiliate_marketing.jpg" alt="Service 3">
+                    <h3>Affiliate Marketing</h3>
+                    <p>Create and share valuable content to attract customers.</p>
+                </a>
+                <a href="softdev.html" class="service-card">
+                    <img src="Software Development.jpg" alt="Service 4">
+                    <h3>Software Development</h3>
+                    <p>Build modern and responsive websites.</p>
+                </a>
+               
+            </div>
+            <div class="services-container4">
+               
+                <a href="content_writing.html" class="service-card">
+                    <img src="content_writing.jpg" alt="Service 4">
+                    <h3>Content Writing</h3>
+                    <p>Build modern and responsive websites.</p>
+                </a>
+                <a href="webhosting.html" class="service-card">
+                    <img src="web_host.jpg" alt="Service 4">
+                    <h3>Web Hosting</h3>
+                    <p>Build modern and responsive websites.</p>
+                </a>
+                <a href="video_creation.html" class="service-card">
+                    <img src="video_creation.jpg" alt="Service 4">
+                    <h3>Video Creation</h3>
+                    <p>Build modern and responsive websites.</p>
+                </a>
+            </div>
+        </section>
+        <div class="separator"></div> 
+        <section class="testimonials">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <p>"The Digimate transformed our online presence. With their innovative strategies, our website traffic increased by 150%, and we’ve seen a massive boost in lead generation. Highly recommend their services!"</p>
+                    <h4>- John Smith, CEO of TechStart</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Working with The Digimate was the best decision for our brand. Their team brought our vision to life with a stunning website design and engaging social media campaigns. Our sales doubled in just three months!"</p>
+                    <h4>- Sarah Johnson, Founder of StyleSquare</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Their expertise in content creation and digital strategy is unparalleled. The Digimate’s team gave our brand a fresh perspective, and their support throughout the journey was fantastic."</p>
+                    <h4>- Emily Carter, Entrepreneur</h4>
+                </div>
+            </div>
+        </section>
+        
+    
+       
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="logo_trans.png" alt="Logo" class="footer-logo-img">
+                    <p>Empowering your digital presence with The Digimate.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: contact@thedigimate.com</p>
+                    <p>Phone: +1-234-567-890</p>
+                    <p>Location: 123 Digital Lane, Web City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 The Digimate. All Rights Reserved.
+            </div>
+        </footer>
+        
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuBtn = document.querySelector(".menu");
+            const dropdownMenu = document.getElementById("dropdownMenu");
+    
+            // Toggle dropdown menu on click
+            menuBtn.addEventListener("click", (event) => {
+                event.stopPropagation(); // Prevent closing when clicking on the button
+                dropdownMenu.style.display =
+                    dropdownMenu.style.display === "block" ? "none" : "block";
+            });
+    
+            // Close the menu when clicking outside
+            document.addEventListener("click", () => {
+                dropdownMenu.style.display = "none";
+            });
+        });
+    </script>
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const quoteBtn = document.querySelector(".quote-btn");
+    
+            // Remove the alert for "REQUEST A QUOTE"
+            quoteBtn.addEventListener("click", () => {
+                // No alert here
+            });
+    
+            const menuBtn = document.querySelector(".menu");
+    
+            // Remove the alert for "MENU"
+            menuBtn.addEventListener("click", () => {
+                // No alert here
+            });
+    
+            // Carousel autoplay
+            const track = document.querySelector(".carousel-track");
+            const slides = Array.from(track.children);
+            const slideWidth = slides[0].getBoundingClientRect().width;
+    
+            let currentIndex = 0;
+    
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            }, 3000);
+        });
+    </script>
+    
+</body>
+</html>

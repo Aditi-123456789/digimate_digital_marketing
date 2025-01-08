@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Quote</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+
+            color: #fff;
+            background-color: #002a3b;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .content {
+            max-width: 50%;
+        }
+
+        .content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .content p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .form-container {
+            background: linear-gradient(135deg, #3a9fc4, #002a3b, white);
+            color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 35%;
+        }
+
+        .form-container h2 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            font-size: 1rem;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9rem;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .content {
+                max-width: 100%;
+            }
+
+            .form-container {
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            max-height: 160px;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            max-height: 150px;
+            width: auto;
+        }
+
+        .quote-btn {
+            background-color: #06003b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 2.1em;
+            border-radius: 5px;
+        }
+
+        .menu {
+            font-size: 2.1em;
+            cursor: pointer;
+            color: #1c0056;
+            font-weight: bold;
+        }
+
+        .footer {
+            background-color: rgba(48, 238, 226, 1);
+            /* Dark theme matching your site */
+            color: #06003b;
+            padding: 40px 20px;
+            font-family: "Gill Sans", sans-serif;
+            width: 100%;
+            /* Ensures the footer spans the entire width */
+            margin: 0;
+            /* Removes any default margins */
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .footer-logo-img {
+            max-width: 100px;
+            margin-bottom: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-links {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .footer-links h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #ffc107;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links ul li a {
+            color: #06003b;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links ul li a:hover {
+            color: #ffc107;
+            /* Hover effect */
+        }
+
+        .footer-contact {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .footer-contact h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #ffc107;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 20px;
+            padding-top: 10px;
+            font-size: 0.9em;
+            color: #06003b;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <main>
+        <div class="container">
+            <div class="content">
+                <h1>Digitizing Your Business Growth</h1>
+                <p>Take the next step to transform your business with expert team members, a results-driven approach,
+                    and streamlined execution.</p>
+                <p>Recognized by industry-leading organizations, we’re here to help you create something amazing!</p>
+            </div>
+
+            <div class="form-container">
+                <h2>Request a Free Consultation</h2>
+                <form id="quoteForm">
+                    <input type="text" id="name" name="name" placeholder="Name*" required>
+                    <div class="error" id="nameError"></div>
+
+                    <input type="text" id="company" name="company" placeholder="Company Name*" required>
+                    <div class="error" id="companyError"></div>
+
+                    <input type="email" id="email" name="email" placeholder="Email*" required>
+                    <div class="error" id="emailError"></div>
+
+                    <input type="tel" id="phone" name="phone" placeholder="Phone*" required>
+                    <div class="error" id="phoneError"></div>
+
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message*" required></textarea>
+                    <div class="error" id="messageError"></div>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="logo_trans.png" alt="Logo" class="footer-logo-img">
+                    <p>Empowering your digital presence with The Digimate.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: contact@thedigimate.com</p>
+                    <p>Phone: +1-234-567-890</p>
+                    <p>Location: 123 Digital Lane, Web City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 The Digimate. All Rights Reserved.
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        document.getElementById("quoteForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            let isValid = true;
+
+            // Clear previous errors
+            document.querySelectorAll(".error").forEach(error => error.textContent = "");
+
+            // Validate Name
+            const name = document.getElementById("name").value;
+            if (name.trim() === "") {
+                document.getElementById("nameError").textContent = "Name is required.";
+                isValid = false;
+            }
+
+            // Validate Company Name
+            const company = document.getElementById("company").value;
+            if (company.trim() === "") {
+                document.getElementById("companyError").textContent = "Company Name is required.";
+                isValid = false;
+            }
+
+            // Validate Email
+            const email = document.getElementById("email").value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById("emailError").textContent = "Please enter a valid email address.";
+                isValid = false;
+            }
+
+            // Validate Phone
+            const phone = document.getElementById("phone").value;
+            const phoneRegex = /^[0-9]{10}$/;
+            if (!phoneRegex.test(phone)) {
+                document.getElementById("phoneError").textContent = "Please enter a valid 10-digit phone number.";
+                isValid = false;
+            }
+
+            // Validate Message
+            const message = document.getElementById("message").value;
+            if (message.trim() === "") {
+                document.getElementById("messageError").textContent = "Message is required.";
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert("Form submitted successfully!");
+                document.getElementById("quoteForm").reset();
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuBtn = document.querySelector(".menu");
+            const dropdownMenu = document.getElementById("dropdownMenu");
+
+            // Toggle dropdown menu on click
+            menuBtn.addEventListener("click", (event) => {
+                event.stopPropagation(); // Prevent closing when clicking on the button
+                dropdownMenu.style.display =
+                    dropdownMenu.style.display === "block" ? "none" : "block";
+            });
+
+            // Close the menu when clicking outside
+            document.addEventListener("click", () => {
+                dropdownMenu.style.display = "none";
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const quoteBtn = document.querySelector(".quote-btn");
+
+            // Remove the alert for "REQUEST A QUOTE"
+            quoteBtn.addEventListener("click", () => {
+                // No alert here
+            });
+
+            const menuBtn = document.querySelector(".menu");
+
+            // Remove the alert for "MENU"
+            menuBtn.addEventListener("click", () => {
+                // No alert here
+            });
+
+            // Carousel autoplay
+            const track = document.querySelector(".carousel-track");
+            const slides = Array.from(track.children);
+            const slideWidth = slides[0].getBoundingClientRect().width;
+
+            let currentIndex = 0;
+
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            }, 3000);
+        });
+    </script>
+</body>
+
+</html>
